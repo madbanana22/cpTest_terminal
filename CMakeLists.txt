@@ -13,6 +13,10 @@ file (GLOB_RECURSE SRCS "src/*.cpp" "src/*.c" "src/*.hpp" "src/*.h") # glob all 
 
 add_executable (cpTest_terminal ${SRCS}) # remember: frontend is the executable, backend is a library
 
+add_subdirectory (cpTest)
+
+target_link_libraries (cpTest_terminal cpTest)
+
 if (CMAKE_VERSION VERSION_GREATER 3.12)
 	# haha cpp version 20 go brbr
 	set_property(TARGET cpTest_terminal PROPERTY CXX_STANDARD 20)

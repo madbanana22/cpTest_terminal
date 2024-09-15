@@ -1,0 +1,3 @@
+[submodule "cpTest"]
+	path = cpTest
+	url = git@github.com:madbanana22/cpTest
